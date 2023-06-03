@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true"
+    android:background="@color/clip">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img1"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#ff000000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titletext"
+            android:text="title"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquareroundotdb"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/maintext"
+            android:text="maintext"
+            android:scrollbars="vertical"
+            android:autoSizeTextType="uniform"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquareroundotdb"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_below="@+id/titletext"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/keyword"
+            android:text="keyword"
+            android:textSize="10sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquareroundotdb"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_below="@+id/maintext"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/url"
+            android:text="url"
+            android:textSize="10sp"
+            android:textColor="#000"
+            android:fontFamily="@font/nanumsquareroundotdb"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_below="@+id/keyword"
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <LinearLayout
+            android:layout_below="@+id/url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="수정"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/btnEdit"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="삭제"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/btnDelete"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
